@@ -1,0 +1,1172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hunaiza ❤️ Arslan | Our Love Story</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #ff6b9d;
+  --light-pink: #ffb4ce;
+  --red: #ff365f;
+  --dark: #250611;
+  --white: #fff4f8;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 15% 15%, #76153e 0, transparent 35%),
+    radial-gradient(circle at 85% 85%, #591027 0, transparent 35%),
+    linear-gradient(135deg, #19030c, #390817, #21030c);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+#particles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  bottom: -40px;
+  color: var(--pink);
+  opacity: 0;
+  animation: floatUp linear infinite;
+  text-shadow: 0 0 12px #ff477e;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(.7);
+    opacity: 0;
+  }
+  15% { opacity: .8; }
+  85% { opacity: .65; }
+  100% {
+    transform: translateY(-115vh) rotate(360deg) scale(1.3);
+    opacity: 0;
+  }
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px 12px 10px;
+}
+
+.logo {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: var(--light-pink);
+  text-transform: uppercase;
+}
+
+.names {
+  margin-top: 10px;
+  font-size: clamp(22px, 5vw, 34px);
+  color: white;
+  text-shadow: 0 0 18px #ff477e;
+}
+
+.progress-wrap {
+  width: min(500px, 85%);
+  height: 5px;
+  margin: 18px auto 0;
+  background: #ffffff20;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress {
+  width: 16.666%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--pink), var(--red));
+  border-radius: 10px;
+  transition: width .6s ease;
+}
+
+#pageCounter {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #ffc2d6;
+  letter-spacing: 2px;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  width: min(850px, 94%);
+  margin: 0 auto;
+  padding: 20px 0 25px;
+}
+
+.page {
+  display: none;
+  min-height: 490px;
+  padding: 28px 22px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: pageIn .75s ease both;
+}
+
+.page.active {
+  display: flex;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.eyebrow {
+  color: var(--light-pink);
+  letter-spacing: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: clamp(34px, 7vw, 62px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 0 22px #ff477e80;
+}
+
+h2 {
+  font-size: clamp(28px, 5vw, 42px);
+  color: var(--light-pink);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #ffe4ed;
+}
+
+.heart {
+  display: inline-block;
+  color: var(--red);
+  animation: heartbeat 1.3s infinite;
+  text-shadow: 0 0 20px #ff365f;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.2); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+}
+
+.big-heart {
+  font-size: 75px;
+  margin: 5px 0 18px;
+}
+
+.card {
+  width: min(620px, 100%);
+  padding: 28px;
+  background: linear-gradient(145deg, #ffffff12, #ff477e0a);
+  border: 1px solid #ff8db544;
+  border-radius: 25px;
+  box-shadow: 0 10px 45px #00000035, 0 0 25px #ff477e12;
+  backdrop-filter: blur(8px);
+}
+
+.btn {
+  padding: 13px 24px;
+  border: 1px solid #ff9dbc88;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff6598, #f12658);
+  color: white;
+  font-size: 15px;
+  box-shadow: 0 0 18px #ff365f55;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 28px #ff477e99;
+}
+
+.btn.secondary {
+  background: #ffffff0b;
+  border-color: #ff8db577;
+}
+
+.navigation {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 12px 28px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin: 15px 0 5px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff50;
+  transition: .3s;
+}
+
+.dot.active {
+  width: 25px;
+  border-radius: 10px;
+  background: var(--pink);
+  box-shadow: 0 0 12px var(--pink);
+}
+
+.flower-garden {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(80px, 1fr));
+  gap: 25px 15px;
+  width: min(520px, 100%);
+  margin: 25px auto;
+}
+
+.flower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.bloom {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+}
+
+.petal {
+  position: absolute;
+  width: 25px;
+  height: 36px;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -18px;
+  background: linear-gradient(145deg, #ffb7d1, #ff3977);
+  border-radius: 50% 50% 42% 42%;
+  transform-origin: 50% 100%;
+  transform: rotate(var(--angle)) translateY(-2px) scale(.05);
+  opacity: .1;
+  box-shadow: 0 0 12px #ff477e66;
+  animation: bloomOpen 2.8s ease-in-out forwards;
+  animation-delay: var(--delay);
+}
+
+.flower:nth-child(2) .petal {
+  background: linear-gradient(145deg, #ffb9bf, #ff4568);
+}
+.flower:nth-child(3) .petal {
+  background: linear-gradient(145deg, #ffe0f0, #ff78b5);
+}
+.flower:nth-child(4) .petal {
+  background: linear-gradient(145deg, #ffadc8, #e82b68);
+}
+.flower:nth-child(5) .petal {
+  background: linear-gradient(145deg, #ffd0e2, #ff5e94);
+}
+.flower:nth-child(6) .petal {
+  background: linear-gradient(145deg, #ffc4c4, #ff355b);
+}
+
+.flower-center {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff4a6, #ffb82e);
+  box-shadow: 0 0 15px #ffcc55;
+  z-index: 2;
+  transform: scale(.1);
+  animation: centerOpen .8s ease forwards;
+  animation-delay: 2.2s;
+}
+
+@keyframes bloomOpen {
+  0% {
+    transform: rotate(var(--angle)) translateY(-2px) scale(.05);
+    opacity: .1;
+  }
+  65% { opacity: 1; }
+  100% {
+    transform: rotate(var(--angle)) translateY(-21px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes centerOpen {
+  to { transform: scale(1); }
+}
+
+.flower-name {
+  color: #ffd0e0;
+  font-size: 13px;
+}
+
+.letter {
+  text-align: left;
+  border-left: 3px solid var(--pink);
+  padding: 10px 0 10px 20px;
+}
+
+.letter p {
+  margin-bottom: 13px;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: min(620px, 100%);
+  margin-top: 8px;
+}
+
+.reason {
+  padding: 18px 12px;
+  border-radius: 18px;
+  background: #ff477e10;
+  border: 1px solid #ff8db533;
+  color: #ffe4ed;
+  line-height: 1.6;
+}
+
+.reason span {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 7px;
+}
+
+.promise-list {
+  list-style: none;
+  text-align: left;
+  margin: 12px auto 0;
+  max-width: 520px;
+}
+
+.promise-list li {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #ff477e12;
+  border: 1px solid #ff8db522;
+  line-height: 1.7;
+}
+
+.gift {
+  font-size: 100px;
+  display: inline-block;
+  filter: drop-shadow(0 0 20px #ff477e88);
+  animation: giftFloat 2s ease-in-out infinite;
+}
+
+@keyframes giftFloat {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+#surpriseMessage {
+  display: none;
+  margin-top: 22px;
+  animation: pageIn .8s ease both;
+}
+
+#surpriseMessage.show {
+  display: block;
+}
+
+input {
+  width: min(210px, 100%);
+  padding: 11px 13px;
+  border-radius: 12px;
+  border: 1px solid #ff8db577;
+  background: #ffffff0d;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #ffd0e099;
+}
+
+.name-editor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 0 15px 25px;
+  text-align: center;
+  color: #ffb4ce99;
+  font-size: 12px;
+}
+
+/* Music ON/OFF button */
+#musicToggle {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  padding: 12px 18px;
+  border: 1px solid #ffb4ceaa;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff6598, #f12658);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  box-shadow: 0 0 22px #ff365f66;
+  backdrop-filter: blur(8px);
+}
+
+#musicToggle:hover {
+  transform: translateY(-2px);
+}
+
+#musicToggle:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .page {
+    min-height: 470px;
+    padding: 24px 12px;
+  }
+
+  .card { padding: 22px 17px; }
+  .flower-garden { gap: 22px 5px; }
+  .bloom { transform: scale(.86); }
+  .reasons { gap: 9px; }
+  .reason { padding: 14px 8px; font-size: 14px; }
+  p { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+<div id="particles" aria-hidden="true"></div>
+
+<button id="musicToggle" type="button"
+  aria-pressed="false" onclick="toggleMusic()">
+  ♫ Music: OFF
+</button>
+
+<header>
+  <div class="logo">A little world made for us</div>
+
+  <div class="names">
+    <span id="headerName1">Hunaiza</span>
+    <span class="heart"> ❤️ </span>
+    <span id="headerName2">Arslan</span>
+  </div>
+
+  <div class="progress-wrap">
+    <div id="progress"></div>
+  </div>
+
+  <div id="pageCounter">PAGE 1 OF 6</div>
+</header>
+
+<main>
+
+  <!-- PAGE 1: WELCOME -->
+  <section class="page active" data-page="0">
+    <div class="eyebrow">For my favourite person</div>
+    <div class="big-heart heart">♥</div>
+
+    <h1>Our Little<br>Love Story</h1>
+
+    <div class="card">
+      <p>
+        Some people make the world beautiful just by being in it.
+        For me, that person is you. This little website is made
+        with love, just for us. ❤️
+      </p>
+
+      <br>
+
+      <p style="color:#ffb4ce">
+        Every flower, every word, every heartbeat is a little reminder
+        of how special you are.
+      </p>
+    </div>
+
+    <br>
+
+    <button class="btn" onclick="openLoveStory()">
+      Open Our Love Story 💌
+    </button>
+  </section>
+
+  <!-- PAGE 2: LOVE GARDEN -->
+  <section class="page" data-page="1">
+    <div class="eyebrow">Watch our love bloom</div>
+    <h2>Our Love Garden 🌸</h2>
+
+    <div class="card">
+      <p>
+        Just like these flowers slowly open, my love for you keeps
+        growing every single day.
+      </p>
+
+      <div class="flower-garden" id="flowerGarden">
+        <div class="flower">
+          <div class="bloom"></div>
+          <div class="flower-name">My Happiness</div>
+        </div>
+
+        <div class="flower">
+          <div class="bloom"></div>
+          <div class="flower-name">My Peace</div>
+        </div>
+
+        <div class="flower">
+          <div class="bloom"></div>
+          <div class="flower-name">My Sunshine</div>
+        </div>
+
+        <div class="flower">
+          <div class="bloom"></div>
+          <div class="flower-name">My Heart</div>
+        </div>
+
+        <div class="flower">
+          <div class="bloom"></div>
+          <div class="flower-name">My Forever</div>
+        </div>
+
+        <div class="flower">
+          <div class="bloom"></div>
+          <div class="flower-name">My Love</div>
+        </div>
+      </div>
+
+      <p style="color:#ffb4ce">
+        You are the most beautiful flower in my garden. 🌹
+      </p>
+
+      <br>
+
+      <button class="btn secondary" onclick="replayFlowers()">
+        Watch Flowers Bloom Again 🌷
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 3: LOVE LETTER -->
+  <section class="page" data-page="2">
+    <div class="eyebrow">A letter from my heart</div>
+    <h2>My Dearest ❤️</h2>
+
+    <div class="card">
+      <div class="letter">
+        <p id="letterGreeting">My lovely Hunaiza,</p>
+
+        <p>
+          I may not always find the perfect words to explain my feelings,
+          but I hope you always feel how much you mean to me.
+        </p>
+
+        <p>
+          Your smile can make a difficult day feel lighter.
+          Your presence brings a kind of happiness that words cannot
+          fully describe.
+        </p>
+
+        <p>
+          I don't need a perfect world. I just want a world where
+          we keep understanding each other, supporting each other,
+          and choosing each other every day.
+        </p>
+
+        <p>
+          Thank you for being you. You have a special place in my heart
+          that nobody else can take.
+        </p>
+
+        <p>With all my love,</p>
+
+        <p id="letterSignature"
+          style="color:#ff8db5;font-size:21px">
+          Yours, Arslan ❤️
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 4: WHY I LOVE YOU -->
+  <section class="page" data-page="3">
+    <div class="eyebrow">A thousand little reasons</div>
+    <h2>Why I Love You 💗</h2>
+
+    <p style="margin-bottom:22px">
+      If I had to explain my love, I would start here...
+    </p>
+
+    <div class="reasons">
+      <div class="reason"><span>😊</span>Your beautiful smile</div>
+      <div class="reason"><span>🫶</span>Your caring heart</div>
+      <div class="reason"><span>🌸</span>The happiness you bring</div>
+      <div class="reason"><span>💖</span>The way you are yourself</div>
+      <div class="reason"><span>🌙</span>The peace I feel with you</div>
+      <div class="reason"><span>♾️</span>The future I dream of</div>
+    </div>
+
+    <br>
+
+    <div class="card" style="margin-top:20px">
+      <p>
+        And the biggest reason of all?
+        <span style="color:#ff8db5">Because you are you. ❤️</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- PAGE 5: FOREVER PROMISE -->
+  <section class="page" data-page="4">
+    <div class="eyebrow">A promise from my heart</div>
+    <h2>My Forever Promise 🤝</h2>
+
+    <div class="card">
+      <p>
+        I cannot promise that every day will be perfect,
+        but I can promise to keep trying with you.
+      </p>
+
+      <ul class="promise-list">
+        <li>❤️ I promise to respect your feelings.</li>
+        <li>🌹 I promise to listen and understand.</li>
+        <li>🫶 I promise to support you in difficult times.</li>
+        <li>✨ I promise to appreciate the little things.</li>
+        <li>💗 I promise to keep choosing kindness and honesty.</li>
+        <li>♾️ I promise to keep putting effort into our bond.</li>
+      </ul>
+
+      <p style="margin-top:20px;color:#ffb4ce">
+        Not just beautiful words — but love shown through actions.
+      </p>
+    </div>
+  </section>
+
+  <!-- PAGE 6: FINAL SURPRISE -->
+  <section class="page" data-page="5">
+    <div class="eyebrow">One last little surprise</div>
+    <h2>Something Just for You 🎁</h2>
+
+    <div class="card">
+      <div class="gift">🎁</div>
+
+      <p>
+        I saved one final message for you.
+        Open it whenever you're ready. ❤️
+      </p>
+
+      <br>
+
+      <button class="btn" onclick="openSurprise()">
+        Open Your Surprise 💝
+      </button>
+
+      <div id="surpriseMessage">
+        <div class="big-heart heart">♥</div>
+        <h2 style="font-size:30px">You Are My Favourite</h2>
+
+        <p>
+          Hunaiza, no website can fully explain what you mean to me.
+          But I hope this little world made you smile.
+        </p>
+
+        <p style="margin-top:15px;color:#ff9fbe">
+          Wherever life takes us, may we always choose love,
+          respect, patience and happiness. ❤️
+        </p>
+
+        <h2 style="margin-top:20px;font-size:28px">
+          Hunaiza ❤️ Arslan
+        </h2>
+
+        <p>Made with love, just for you. 🌹</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <p style="font-size:14px">
+        Want to change the names shown on this page?
+      </p>
+
+      <div class="name-editor">
+        <input id="name1Input" type="text"
+          placeholder="First name" value="Hunaiza">
+
+        <input id="name2Input" type="text"
+          placeholder="Second name" value="Arslan">
+
+        <button class="btn" onclick="updateNames()">
+          Update Names 💕
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="dots" id="dots">
+    <button class="dot active" onclick="goToPage(0)"
+      aria-label="Page 1"></button>
+    <button class="dot" onclick="goToPage(1)"
+      aria-label="Page 2"></button>
+    <button class="dot" onclick="goToPage(2)"
+      aria-label="Page 3"></button>
+    <button class="dot" onclick="goToPage(3)"
+      aria-label="Page 4"></button>
+    <button class="dot" onclick="goToPage(4)"
+      aria-label="Page 5"></button>
+    <button class="dot" onclick="goToPage(5)"
+      aria-label="Page 6"></button>
+  </div>
+</main>
+
+<div class="navigation">
+  <button class="btn secondary" id="prevBtn"
+    onclick="previousPage()" disabled>
+    ← Previous
+  </button>
+
+  <button class="btn" id="nextBtn" onclick="nextPage()">
+    Next Page →
+  </button>
+</div>
+
+<footer id="pageFooter">
+  Made with ❤️ for Hunaiza &amp; Arslan · Our little world
+</footer>
+
+<script>
+/* ========================================
+   ROMANTIC BACKGROUND MUSIC
+   Generated with Web Audio API.
+   No separate audio file is required.
+======================================== */
+
+let musicContext = null;
+let musicMaster = null;
+let musicTimer = null;
+let musicStep = 0;
+let musicPlaying = false;
+
+const musicNotes = [
+  [261.63, 329.63, 392.00, 493.88],
+  [220.00, 261.63, 329.63, 440.00],
+  [174.61, 220.00, 261.63, 392.00],
+  [196.00, 246.94, 293.66, 392.00]
+];
+
+function playSoftNote(frequency, startAt, duration, volume, type) {
+  if (!musicContext || !musicMaster) return;
+
+  const osc = musicContext.createOscillator();
+  const gain = musicContext.createGain();
+
+  osc.type = type || "sine";
+  osc.frequency.setValueAtTime(frequency, startAt);
+
+  gain.gain.setValueAtTime(0.0001, startAt);
+  gain.gain.exponentialRampToValueAtTime(
+    volume,
+    startAt + 0.35
+  );
+
+  gain.gain.setTargetAtTime(
+    0.0001,
+    startAt + duration * 0.55,
+    duration * 0.3
+  );
+
+  osc.connect(gain);
+  gain.connect(musicMaster);
+
+  osc.start(startAt);
+  osc.stop(startAt + duration + 1.2);
+}
+
+function scheduleMusic() {
+  if (!musicPlaying || !musicContext) return;
+
+  const now = musicContext.currentTime;
+  const chord =
+    musicNotes[Math.floor(musicStep / 8) % musicNotes.length];
+
+  // Soft, warm background chords.
+  if (musicStep % 4 === 0) {
+    chord.slice(0, 3).forEach((note, i) => {
+      playSoftNote(
+        note / 2,
+        now + i * 0.035,
+        3.8,
+        0.095,
+        "sine"
+      );
+    });
+  }
+
+  // Gentle bell-like melody.
+  const melody = chord[(musicStep * 3 + 1) % chord.length] * 2;
+
+  playSoftNote(melody, now, 1.7, 0.075, "triangle");
+  playSoftNote(melody * 0.5, now, 2.1, 0.035, "sine");
+
+  musicStep++;
+  musicTimer = setTimeout(scheduleMusic, 650);
+}
+
+async function toggleMusic() {
+  const button = document.getElementById("musicToggle");
+
+  // Turn the music off.
+  if (musicPlaying) {
+    musicPlaying = false;
+    clearTimeout(musicTimer);
+
+    if (musicMaster && musicContext) {
+      musicMaster.gain.cancelScheduledValues(
+        musicContext.currentTime
+      );
+
+      musicMaster.gain.setTargetAtTime(
+        0.0001,
+        musicContext.currentTime,
+        0.12
+      );
+    }
+
+    button.textContent = "♫ Music: OFF";
+    button.setAttribute("aria-pressed", "false");
+    return;
+  }
+
+  // Turn the music on.
+  try {
+    const AudioCtx =
+      window.AudioContext || window.webkitAudioContext;
+
+    if (!AudioCtx) {
+      button.textContent = "Music unavailable";
+      return;
+    }
+
+    if (!musicContext) {
+      musicContext = new AudioCtx();
+      musicMaster = musicContext.createGain();
+
+      // Master volume.
+      musicMaster.gain.value = 0.0001;
+      musicMaster.connect(musicContext.destination);
+    }
+
+    await musicContext.resume();
+
+    musicMaster.gain.cancelScheduledValues(
+      musicContext.currentTime
+    );
+
+    musicMaster.gain.setTargetAtTime(
+      0.72,
+      musicContext.currentTime,
+      0.18
+    );
+
+    musicPlaying = true;
+    button.textContent = "♫ Music: ON";
+    button.setAttribute("aria-pressed", "true");
+
+    scheduleMusic();
+  } catch (error) {
+    musicPlaying = false;
+    button.textContent = "Tap to play music";
+    console.error("Music could not start:", error);
+  }
+}
+
+/*
+  The first click on "Open Our Love Story" starts the music
+  and moves the visitor to the next page.
+*/
+function openLoveStory() {
+  if (!musicPlaying) {
+    toggleMusic();
+  }
+
+  nextPage();
+}
+
+/* ========================================
+   PAGE NAVIGATION
+======================================== */
+
+const pages = Array.from(document.querySelectorAll(".page"));
+const dots = Array.from(document.querySelectorAll(".dot"));
+const progress = document.getElementById("progress");
+const pageCounter = document.getElementById("pageCounter");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let currentPage = 0;
+
+function showPage(index) {
+  if (index < 0 || index >= pages.length) return;
+
+  currentPage = index;
+
+  pages.forEach((page, i) => {
+    page.classList.toggle("active", i === currentPage);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentPage);
+  });
+
+  progress.style.width =
+    ((currentPage + 1) / pages.length * 100) + "%";
+
+  pageCounter.textContent =
+    "PAGE " + (currentPage + 1) + " OF " + pages.length;
+
+  prevBtn.disabled = currentPage === 0;
+  prevBtn.style.opacity = currentPage === 0 ? ".45" : "1";
+
+  nextBtn.style.display =
+    currentPage === pages.length - 1
+      ? "none"
+      : "inline-block";
+
+  if (currentPage === 1) {
+    replayFlowers();
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+function nextPage() {
+  if (currentPage < pages.length - 1) {
+    showPage(currentPage + 1);
+  }
+}
+
+function previousPage() {
+  if (currentPage > 0) {
+    showPage(currentPage - 1);
+  }
+}
+
+function goToPage(index) {
+  showPage(index);
+}
+
+/* ========================================
+   FLOWER ANIMATIONS
+======================================== */
+
+function createFlowers() {
+  document.querySelectorAll(".bloom").forEach((bloom) => {
+    bloom.innerHTML = "";
+
+    for (let i = 0; i < 8; i++) {
+      const petal = document.createElement("span");
+
+      petal.className = "petal";
+      petal.style.setProperty("--angle", (i * 45) + "deg");
+      petal.style.setProperty("--delay", (i * 0.12) + "s");
+
+      bloom.appendChild(petal);
+    }
+
+    const center = document.createElement("span");
+    center.className = "flower-center";
+    bloom.appendChild(center);
+  });
+}
+
+function replayFlowers() {
+  const garden = document.getElementById("flowerGarden");
+  if (!garden) return;
+
+  garden.querySelectorAll(".bloom").forEach((bloom) => {
+    bloom.querySelectorAll(".petal, .flower-center").forEach((item) => {
+      item.style.animation = "none";
+    });
+
+    void bloom.offsetWidth;
+
+    bloom.querySelectorAll(".petal").forEach((petal) => {
+      petal.style.animation = "";
+    });
+
+    const center = bloom.querySelector(".flower-center");
+
+    if (center) {
+      center.style.animation = "";
+    }
+  });
+}
+
+/* ========================================
+   FINAL SURPRISE
+======================================== */
+
+function openSurprise() {
+  const message = document.getElementById("surpriseMessage");
+
+  message.classList.toggle("show");
+
+  if (message.classList.contains("show")) {
+    message.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest"
+    });
+
+    burstHearts();
+  }
+}
+
+/* ========================================
+   UPDATE NAMES
+======================================== */
+
+function updateNames() {
+  const first =
+    document.getElementById("name1Input").value.trim() || "Hunaiza";
+
+  const second =
+    document.getElementById("name2Input").value.trim() || "Arslan";
+
+  document.getElementById("headerName1").textContent = first;
+  document.getElementById("headerName2").textContent = second;
+
+  document.getElementById("letterGreeting").textContent =
+    "My lovely " + first + ",";
+
+  document.getElementById("letterSignature").textContent =
+    "Yours, " + second + " ❤️";
+
+  document.querySelector("#surpriseMessage h2:last-of-type").textContent =
+    first + " ❤️ " + second;
+
+  document.getElementById("pageFooter").textContent =
+    "Made with ❤️ for " + first + " & " + second +
+    " · Our little world";
+}
+
+/* ========================================
+   FLOATING HEARTS
+======================================== */
+
+function createFloatingParticles() {
+  const container = document.getElementById("particles");
+  const symbols = ["♥", "♡", "✿", "❤"];
+
+  for (let i = 0; i < 24; i++) {
+    const particle = document.createElement("span");
+
+    particle.className = "particle";
+    particle.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    particle.style.left = Math.random() * 100 + "%";
+    particle.style.fontSize =
+      (12 + Math.random() * 20) + "px";
+
+    particle.style.animationDuration =
+      (9 + Math.random() * 12) + "s";
+
+    particle.style.animationDelay =
+      (Math.random() * 12) + "s";
+
+    container.appendChild(particle);
+  }
+}
+
+function burstHearts() {
+  const container = document.getElementById("particles");
+
+  for (let i = 0; i < 16; i++) {
+    const heart = document.createElement("span");
+
+    heart.className = "particle";
+    heart.textContent = "♥";
+
+    heart.style.left = (15 + Math.random() * 70) + "%";
+    heart.style.fontSize = (18 + Math.random() * 18) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+    heart.style.animationDelay = "0s";
+
+    container.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+  }
+}
+
+/* ========================================
+   INITIALIZE WEBSITE
+======================================== */
+
+createFlowers();
+createFloatingParticles();
+showPage(0);
+</script>
+
+</body>
+</html>
